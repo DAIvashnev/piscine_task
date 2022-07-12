@@ -1,5 +1,5 @@
+#include <unistd.h>
 
-// ^^^^ где заголовочный файл? Программа не скомпилировалась 
 void ft_putchar(char c) {
     write(1, &c, 1);
 }
