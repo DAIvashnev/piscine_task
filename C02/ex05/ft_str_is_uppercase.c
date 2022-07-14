@@ -1,5 +1,3 @@
-#include <string.h>
-
 int ft_str_is_uppercase(char *str) {
     for(int i=0; str[i]!='\0'; i++) {
         if(str[i]<65 || str[i]>90) {
@@ -9,7 +7,7 @@ int ft_str_is_uppercase(char *str) {
             return 0;
         }
     }
-    if(str[0]=='\0' && strlen((str)-1)=='\0') {
+    if(str[0]=='\0') {
         return 1;
     }
     return 1;
