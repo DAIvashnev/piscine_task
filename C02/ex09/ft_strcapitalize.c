@@ -12,3 +12,6 @@ char *ft_strcapitalize(char *str) {
     }
     return str;
 }
+
+// Salut, Comment Tu Vas ? 42Mots Quarante-Deux; Cinquante+Et+Un
+//                         ^^эта буква "м" должна была остаться маленькой.
