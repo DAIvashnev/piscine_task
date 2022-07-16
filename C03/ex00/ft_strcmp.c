@@ -7,3 +7,7 @@ int ft_strcmp(char *s1, char *s2) {
     }
     return s1[f]-s2[f];
 }
+
+// Функция работает некорректно. 
+// Варианты тестовых данных:
+// Hello / hello , hello / Hello , Hello / Hollo , "Hello World" / "Govno World"
