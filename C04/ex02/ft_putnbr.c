@@ -7,9 +7,10 @@ void ft_putchar(char c) {
 void ft_putnbr(int nb) {
     int i=0;
     char str[256];
-    if(nb < -32768 || nb > 32767) {
+    if(nb < -32768 || nb > 32767) { // в целом кайф, все работает четко - но вот нафига этот if? Я его удалил и числа больше 32767 мне прекрасно выводились ???
         if(nb > 32768){
-            ft_putchar('3'); ft_putchar('2'); ft_putchar('7'); ft_putchar('6'); ft_putchar('7');
+            ft_putchar('3'); ft_putchar('2'); ft_putchar('7'); ft_putchar('6'); ft_putchar('7'); // А не проще было притащить сюда ft_putstr который ты написал в прошлом задании 
+                                                                                                // И сделать ft_putstr("32767"); ??
         }
         else {
             ft_putchar('-'); ft_putchar('3'); ft_putchar('2'); ft_putchar('7'); ft_putchar('6'); ft_putchar('8');

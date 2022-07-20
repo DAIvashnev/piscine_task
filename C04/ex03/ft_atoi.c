@@ -20,7 +20,7 @@ int ft_atoi(char *str) {
             i++;
         }
     }
-    if(data < -32768 || data > 32767) {
+    if(data < -32768 || data > 32767) { // опять таки - нафига это???
         if(data < -32768){
             
             return -32768;

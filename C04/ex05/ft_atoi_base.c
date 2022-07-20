@@ -1,4 +1,4 @@
-//compilу me
+//compilу me мур-мур-мур :3
 #include <unistd.h>
 
 void ft_putchar(char c) {
