@@ -1,24 +1,25 @@
 SRCS = ft_putchar.c ft_putstr.c ft_strcmp.c ft_strlen.c ft_swap.c
 SRCS_DIR = srcs
-OBG = $(notdir $(SRC:.c=.o))
-OBG_DIR = obj
+OBJ = $(notdir $(SRCS:.c=.o))
+OBJ_DIR = obj
 INC_DIR = includes
 INC = ft.h
 CC = gcc
-FLAGS = -с -Wall -Wextra -Werror
+FLAGS = -c -Wall -Wextra -Werror
 СFLAGS = $(FLAGS)
 
-vpath %.c $(SRC_DIR)
-vpath %.o $(OBG_DIR)
+vpath %.c $(SRCS_DIR)
+vpath %.o $(OBJ_DIR)
 
 all: libft.a
-%.o: %.c
-	@mkdir -p $(OPG_DIR)
-	$(CC) $(СFLAGS) -o $(addprefix $(OBG_DIR)/, $@) -c $<
-libft.a: $(OBG)
-	ar rc libft.a $(addprefix $(OBG_DIR)/, $(OBG))
+%.o: %.c	
+	@mkdir -p $(OBJ_DIR)
+	$(CC) $(СFLAGS) -o $(addprefix $(OBJ_DIR)/, $@) -c $<
+
+libft.a: $(OBJ)
+	ar rc libft.a $(addprefix $(OBJ_DIR)/, $(OBJ))
 clean:
-	rm -rf *.o
+	rm -rf $(OBJ_DIR)
 
 fclean: clean
 	rm -rf libft.a
